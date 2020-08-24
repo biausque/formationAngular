@@ -16,7 +16,12 @@
 <body>
     <div ng-app ng-init="ref='ABD-23';quant=2;prix=2.20">
         votre artcicle ref : {{ref}} au prix de {{prix}} Euros a ete ajouté au panier pour un total de {{quant*prix | currency : '&euro;' : 3}} 
+        <br>
+        Reference du produit : 
+        <input type="text" name="ref" id="ref" ng-model="ref" />
     </div>>
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
 </body>
 </html>
