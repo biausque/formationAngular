@@ -10,10 +10,13 @@
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
+    
     
 </head>
 <body>
-    
+    <div ng-app ng-init="ref='ABD-23';quant=2;prix=2.20">
+        votre artcicle ref : {{ref}} au prix de {{prix}} Euros a ete ajouté au panier pour un total de {{quant*prix | currency : '&euro;' : 3}} 
+    </div>>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
 </body>
 </html>
