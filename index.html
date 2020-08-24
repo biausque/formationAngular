@@ -15,11 +15,15 @@
 </head>
 <body>
     <div ng-app="app" >
-        <div class="unproduit" ng-controller="produitctrl">
-        votre artcicle {{nom}} ref : {{ref}} au prix de {{prix}} Euros a ete ajouté au panier pour un total de {{quant*prix | currency : '&euro;' : 3}} 
+        <div class="unproduit" ng-controller="produitctrl as produit">
+        votre artcicle {{produit.nom}} ref : {{produit.ref}} au prix de {{produit.prix}} Euros a ete ajouté au panier pour un total de {{quant*prix | currency : '&euro;' : 3}} 
         <br>
         Reference du produit : 
-        <input type="text" name="ref" id="ref" ng-model="ref" />
+        <input type="text" name="ref" id="ref" ng-model=produit.ref />
+        nom : 
+        <input type="text" name="nom" id="nom" ng-model=produit.nom />
+         prix
+        <input type="number" name="prix" id="prix" ng-model=produit.prix />
         </div>
     </div>>
     
