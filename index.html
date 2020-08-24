@@ -15,7 +15,37 @@
 </head>
 <body>
     <div ng-app="app" >
+        
         <div class="unproduit" ng-controller="produitctrl as produit">
+            
+            <form action="" method="POST" role="form">
+                <legend>Edition produit</legend>
+            
+                <div class="form-group">
+                    <label for="input-titre">titre produit</label>
+                    <input type="text" class="form-control" name="input-titre" id="input-titre"  ng-model=produit.ref>
+                </div>
+                <div class="form-group">
+                    <label for="input-image">Image Produit</label>
+                    <input type="text" class="form-control" name="input-image" id="input-image" placeholder="Input field" ng-model=produit.image>
+                    <img ng-src="{{produit.image}}" style="height: 200px;max-width: width 200px;size:auto">
+                </div>
+                <div class="form-group">
+                    <label for="input-prix">Prix Produit</label>
+                    <input type="number" class="form-control"  name="input-prix" id="input-prix" placeholder="Input field" ng-model=produit.prix>
+                </div>
+                <div class="form-group">
+                    <label for="textarea-desc">Description Produit</label>
+                    <textarea name="textarea-desc" id="textarea-desc" cols="30" rows="10" ng-model=produit.desc></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+                
+            
+                
+            </form>
+            {{produit|json}}
+
         votre artcicle {{produit.nom}} ref : {{produit.ref}} au prix de {{produit.prix}} Euros a ete ajouté au panier pour un total de {{quant*prix | currency : '&euro;' : 3}} 
         <br>
         Reference du produit : 
