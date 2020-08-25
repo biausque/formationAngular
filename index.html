@@ -16,8 +16,7 @@
 <body>
     <div ng-app="app" >
         <nav-bar></nav-bar>
-        <div nav-bar></div>
-        <div class="nav-bar"></div>
+        <mon-panier></mon-panier>        
         <div class="unproduit" ng-controller="produitctrl as produit">
             
             <form action="" method="POST" role="form">
@@ -62,7 +61,11 @@
     <!--liste des scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
     <script src="/App/App.js"></script>
+    <script src="/App/filter/myCurrency/myCurrency.js"></script>
+    <script src="/App/filter/compta/compta.js"></script>
     <script src="/App/produitctrl/produitctrl.js"></script>
     <script src="/App/directive/navbar/navbar.js"></script>
+    <script src="/App/directive/panier/panier.js"></script>
+    
 </body>
 </html>

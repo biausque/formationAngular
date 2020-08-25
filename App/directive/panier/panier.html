@@ -1,0 +1,28 @@
+<table width=20% style="float:right; position:absolute;right:10px;border:1px solid black" >
+    <tr bgcolor="grey">
+        <th style="border:1px solid black">Titre</th>
+        <th style="border:1px solid black">Image</th>
+        <th style="border:1px solid black">quantité</th>
+        <th style="border:1px solid black">prix</th>
+    </tr>
+    <tr bgcolor="lightgrey">
+        <td style="border:1px solid black" width=33%>livre 1</td>
+        <td style="border:1px solid black" width=33%>
+            <IMG src="../../../img/beurre1.jpg" width=100% border="0" alt="">
+        </td>
+        <td  style="border:1px solid black" width=15%>2</td>
+        <td  style="border:1px solid black" width=19%>{{'4.50' | myround | mycurrency }}</td>
+    </tr>
+    <tr>
+        <td style="border-right:1px solid black" colspan="3" align="right">Sous-total HT  </td>
+        <td style="border-bottom:1px solid black"width=34%>{{'9.00'| myround | mycurrency }}</td>
+    </tr>
+    <tr>
+        <td style="border-right:1px solid black" colspan="3" align="right">TVA (taux 20 %)  </td>
+        <td style="border-bottom:1px solid black">{{'9.00'| tva : 19.6 | myround | mycurrency }}</td>
+    </tr>
+    <tr>
+        <td style="border-right:1px solid black" colspan="3" align="right">TTC  </td>
+        <td>{{'9.00'|ttc : 19.6 | myround | mycurrency }}</td>
+    </tr>
+</table>

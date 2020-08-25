@@ -17,7 +17,8 @@
            // controllerAs: 'vm',
            // link: link,
             restrict: 'EAC',
-            template:'<div> Voici ma directive </div>'
+            templateUrl:'/App/directive/navBar/navBar.html'
+            //template:'<div> Voicti ma directive </div>'
             //scope: {title:'Mon 1er site angularJS'}
         };
         return directive;
